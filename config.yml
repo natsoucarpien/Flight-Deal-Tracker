@@ -28,6 +28,11 @@ destinations:
     - {code: BOD, name: Bordeaux, date_windows: *w4}
     - {code: NTE, name: Nantes, date_windows: *w4}
     - {code: LYS, name: Lyon, date_windows: *w4}
+    - {code: LIL, name: Lille, date_windows: *w4}
+    - {code: RNS, name: Rennes, date_windows: *w4}
+    - {code: BES, name: Brest, date_windows: *w4}
+    - {code: CFR, name: Caen, date_windows: *w4}
+    - {code: SXB, name: Strasbourg, date_windows: *w4}
 
   # "international" = tout le reste
   international:
@@ -68,6 +73,9 @@ destinations:
     - {code: CPH, name: Copenhague, date_windows: *w5}
     - {code: ARN, name: Stockholm, date_windows: *w5}
     - {code: KEF, name: Reykjavik, date_windows: *w5}
+    - {code: MAH, name: Minorque, date_windows: *w5}
+    - {code: BSL, name: Bale-Mulhouse, date_windows: *w5}
+    - {code: MAN, name: Manchester, date_windows: *w5}
     - code: RAK
       name: Marrakech
       date_windows: &w7           # sejours de 7 jours (plus loin / soleil)
@@ -83,6 +91,12 @@ destinations:
     - {code: LPA, name: Grande Canarie, date_windows: *w7}
     - {code: FAO, name: Faro, date_windows: *w7}
     - {code: CAI, name: Le Caire, date_windows: *w7}
+    - {code: ACE, name: Lanzarote, date_windows: *w7}
+    - {code: DJE, name: Djerba, date_windows: *w7}
+    - {code: ORN, name: Oran, date_windows: *w7}
+    - {code: RBA, name: Rabat, date_windows: *w7}
+    - {code: TNG, name: Tanger, date_windows: *w7}
+    - {code: FEZ, name: Fes, date_windows: *w7}
 
 filters:
   # Le nom du champ garde "usd" (code d'origine) mais la valeur est en EUR
@@ -92,13 +106,13 @@ filters:
   blocked_carriers: []            # aucune : les low-cost (Ryanair, Vueling, easyJet...) sont voulues
 
 api_budget:
-  monthly_max_calls: 6000
+  monthly_max_calls: 8000
 
-# Par passage : 5 origines x (1 France + 4 international) x 1 fenetre x 2 mois = ~50 appels
-# 3 passages/jour = ~4500 appels/mois, sous le plafond ci-dessus.
+# Par passage : 5 origines x (2 France + 5 international) x 1 fenetre x 2 mois = ~70 appels
+# 3 passages/jour = ~6300 appels/mois, sous le plafond ci-dessus.
 rotation:
-  domestic_per_run: 3
-  international_per_run: 12
+  domestic_per_run: 2
+  international_per_run: 5
   windows_per_run: 1
 
 search:
