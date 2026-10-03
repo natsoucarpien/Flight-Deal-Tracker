@@ -1,15 +1,24 @@
 # Flight deal report
 
-_Updated 2026-10-03 18:31 UTC_
+_Updated 2026-10-03 19:07 UTC_
 
 ## Top 3 domestic
 
-_No qualifying offers in the latest run._
+1. PAR->NCE $87 · TO 7136 · nonstop · Dec 12-16
 
 ## Top 3 international
 
-1. CLT->CUN $430 · Air Canada (AC) 8746 · 1 stop · Sep 22-29
+1. BCN->LIS $48 · VY 1148 · nonstop · Nov 18-23
+2. BCN->OPO $62 · VY 1178 · nonstop · Dec 9-14
+3. PAR->SVQ $157 · V7 3803 · 1 stop · Dec 24-29
 
 ## Routes (cheapest current offer, 7-day trend)
 
-_No offers recorded in the last 24 hours._
+| Route | Cheapest | 7d trend |
+|-------|---------:|----------|
+| BCN→LIS | $48 | – |
+| BCN→NCE | $139 | – |
+| BCN→OPO | $62 | – |
+| PAR→LIS | $115 | – |
+| PAR→NCE | $87 | – |
+| PAR→SVQ | $157 | – |
