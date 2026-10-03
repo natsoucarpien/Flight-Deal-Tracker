@@ -1,4 +1,4 @@
-# Dénicheur de vols pas chers - départs Montpellier (priorité), Toulouse, Marseille, Barcelone, Paris.
+# Denicheur de vols pas chers - departs Montpellier (priorite), Toulouse, Marseille, Barcelone, Paris.
 # Source de prix : Travelpayouts (Aviasales), prix en cache. Token via la variable TRAVELPAYOUTS_TOKEN.
 
 origins:
@@ -18,7 +18,7 @@ destinations:
   domestic:
     - code: NCE
       name: Nice
-      date_windows: &w4           # séjours de 4 jours (city-trips, week-ends)
+      date_windows: &w4           # sejours de 4 jours (city-trips, week-ends)
         - {depart_start: "2026-11-01", depart_end: "2026-12-31", trip_length_days: 4}
         - {depart_start: "2027-01-01", depart_end: "2027-02-28", trip_length_days: 4}
         - {depart_start: "2027-03-01", depart_end: "2027-04-30", trip_length_days: 4}
@@ -33,7 +33,7 @@ destinations:
   international:
     - code: LIS
       name: Lisbonne
-      date_windows: &w5           # séjours de 5 jours
+      date_windows: &w5           # sejours de 5 jours
         - {depart_start: "2026-11-01", depart_end: "2026-12-31", trip_length_days: 5}
         - {depart_start: "2027-01-01", depart_end: "2027-02-28", trip_length_days: 5}
         - {depart_start: "2027-03-01", depart_end: "2027-04-30", trip_length_days: 5}
@@ -70,7 +70,7 @@ destinations:
     - {code: KEF, name: Reykjavik, date_windows: *w5}
     - code: RAK
       name: Marrakech
-      date_windows: &w7           # séjours de 7 jours (plus loin / soleil)
+      date_windows: &w7           # sejours de 7 jours (plus loin / soleil)
         - {depart_start: "2026-11-01", depart_end: "2026-12-31", trip_length_days: 7}
         - {depart_start: "2027-01-01", depart_end: "2027-02-28", trip_length_days: 7}
         - {depart_start: "2027-03-01", depart_end: "2027-04-30", trip_length_days: 7}
@@ -80,3 +80,34 @@ destinations:
     - {code: TUN, name: Tunis, date_windows: *w7}
     - {code: IST, name: Istanbul, date_windows: *w7}
     - {code: TFS, name: Tenerife Sud, date_windows: *w7}
+    - {code: LPA, name: Grande Canarie, date_windows: *w7}
+    - {code: FAO, name: Faro, date_windows: *w7}
+    - {code: CAI, name: Le Caire, date_windows: *w7}
+
+filters:
+  # Le nom du champ garde "usd" (code d'origine) mais la valeur est en EUR
+  # puisque search.currency est eur. A verifier au premier passage.
+  max_price_usd: 200              # plafond aller-retour par personne
+  max_stops: 1
+  blocked_carriers: []            # aucune : les low-cost (Ryanair, Vueling, easyJet...) sont voulues
+
+api_budget:
+  monthly_max_calls: 6000
+
+# Par passage : 5 origines x (1 France + 4 international) x 1 fenetre x 2 mois = ~50 appels
+# 3 passages/jour = ~4500 appels/mois, sous le plafond ci-dessus.
+rotation:
+  domestic_per_run: 1
+  international_per_run: 4
+  windows_per_run: 1
+
+search:
+  currency: eur
+
+ranking:
+  history_days: 30
+  min_history_offers: 8
+
+alerts:
+  threshold_dedupe_hours: 24
+  max_threshold_alerts_per_run: 5
