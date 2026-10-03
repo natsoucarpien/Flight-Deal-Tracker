@@ -18,6 +18,7 @@ import logging
 import os
 import random
 import time
+from datetime import date
 from typing import Any, Callable
 
 import requests
@@ -32,9 +33,26 @@ MAX_RETRIES = 4
 BACKOFF_BASE_SECONDS = 1.5
 REQUEST_TIMEOUT_SECONDS = 30
 
-# False = ne pas filtrer sur la duree du sejour (voir prices_calendar).
+# False = ne pas filtrer sur la duree du sejour cote API (voir prices_calendar).
 # Mettre True pour revenir au comportement d'origine (duree exacte).
 SEND_STAY_LENGTH = False
+
+# Duree de sejour acceptee (en jours, retour - depart), appliquee apres l'appel.
+MIN_STAY_DAYS = 2
+MAX_STAY_DAYS = 15
+
+
+def _stay_ok(ticket: dict[str, Any]) -> bool:
+    """True si la duree du sejour est entre MIN_STAY_DAYS et MAX_STAY_DAYS.
+
+    Si les dates sont absentes ou illisibles, on garde le billet.
+    """
+    try:
+        depart = date.fromisoformat(str(ticket["departure_at"])[:10])
+        back = date.fromisoformat(str(ticket["return_at"])[:10])
+    except (KeyError, ValueError, TypeError):
+        return True
+    return MIN_STAY_DAYS <= (back - depart).days <= MAX_STAY_DAYS
 
 
 class TravelpayoutsError(RuntimeError):
@@ -150,4 +168,8 @@ class TravelpayoutsClient:
         if SEND_STAY_LENGTH:
             params["length"] = length
         payload = self._request(CALENDAR_PATH, params)
-        return payload.get("data", {}) or {}
+        data = payload.get("data", {}) or {}
+        return {
+            day: ticket for day, ticket in data.items()
+            if _stay_ok(ticket)
+        }
