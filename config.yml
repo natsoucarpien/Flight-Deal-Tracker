@@ -97,8 +97,8 @@ api_budget:
 # Par passage : 5 origines x (1 France + 4 international) x 1 fenetre x 2 mois = ~50 appels
 # 3 passages/jour = ~4500 appels/mois, sous le plafond ci-dessus.
 rotation:
-  domestic_per_run: 1
-  international_per_run: 4
+  domestic_per_run: 3
+  international_per_run: 12
   windows_per_run: 1
 
 search:
