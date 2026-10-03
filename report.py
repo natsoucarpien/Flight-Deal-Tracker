@@ -1,9 +1,12 @@
 """Regenerate report.md: top-3 deals per region plus per-route cheapest
-current price with a 7-day trend."""
+current price with a 7-day trend. Prix affiches en euros, avec un lien
+Google Flights pour verifier chaque offre."""
 from __future__ import annotations
 
 import logging
+import re
 from datetime import datetime, timedelta, timezone
+from urllib.parse import quote
 
 import db
 import rank
@@ -15,6 +18,29 @@ log = logging.getLogger("report")
 OUTPUT_PATH = "report.md"
 
 
+def google_flights_url(origin: str, dest: str, depart: str | None = None, back: str | None = None) -> str:
+    """Lien Google Flights (recherche en langage naturel) pour verifier une offre."""
+    query = f"Flights from {origin} to {dest}"
+    if depart:
+        query += f" on {depart}"
+    if back:
+        query += f" through {back}"
+    return f"https://www.google.com/travel/flights?q={quote(query)}&curr=EUR&hl=fr"
+
+
+def euro(text: str) -> str:
+    """'$48' -> '48 €' dans un texte deja formate."""
+    return re.sub(r"\$(\d+)", r"\1 €", text)
+
+
+def _field(row, key):
+    """Lit un champ d'une ligne de base de donnees sans jamais planter."""
+    try:
+        return row[key]
+    except (KeyError, IndexError, TypeError):
+        return None
+
+
 def route_trends(conn) -> list[dict]:
     """Per route: cheapest price in the last 24h vs cheapest 1-7 days ago."""
     now = datetime.now(timezone.utc)
@@ -23,6 +49,7 @@ def route_trends(conn) -> list[dict]:
 
     current: dict[tuple[str, str], float] = {}
     previous: dict[tuple[str, str], float] = {}
+    cheapest_row: dict[tuple[str, str], object] = {}
     for row in db.offers_since(conn, 7):
         key = (row["origin"], row["dest"])
         if row["run_timestamp"] >= day_ago:
@@ -33,6 +60,8 @@ def route_trends(conn) -> list[dict]:
             continue
         if key not in bucket or row["price_usd"] < bucket[key]:
             bucket[key] = row["price_usd"]
+            if bucket is current:
+                cheapest_row[key] = row
 
     trends = []
     for (origin, dest), price in sorted(current.items()):
@@ -40,12 +69,17 @@ def route_trends(conn) -> list[dict]:
         if prior is None:
             trend = "–"
         elif price < prior:
-            trend = f"↓ ${prior - price:.0f}"
+            trend = f"↓ {prior - price:.0f} €"
         elif price > prior:
-            trend = f"↑ ${price - prior:.0f}"
+            trend = f"↑ {price - prior:.0f} €"
         else:
             trend = "→ flat"
-        trends.append({"origin": origin, "dest": dest, "price": price, "trend": trend})
+        row = cheapest_row.get((origin, dest))
+        trends.append({
+            "origin": origin, "dest": dest, "price": price, "trend": trend,
+            "depart": _field(row, "depart_date") if row is not None else None,
+            "back": _field(row, "return_date") if row is not None else None,
+        })
     return trends
 
 
@@ -57,6 +91,8 @@ def build_report(conn, config: dict) -> str:
         "",
         f"_Updated {datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M UTC')}_",
         "",
+        "_Prix en euros, issus d'un cache : à vérifier sur Google Flights ou chez la compagnie avant de réserver._",
+        "",
     ]
     for region in ("domestic", "international"):
         lines.append(f"## Top 3 {region}")
@@ -65,17 +101,25 @@ def build_report(conn, config: dict) -> str:
         if not deals:
             lines.append("_No qualifying offers in the latest run._")
         for i, deal in enumerate(deals, 1):
-            lines.append(f"{i}. {format_deal(deal)}")
+            text = euro(format_deal(deal))
+            origin, dest = deal.get("origin"), deal.get("dest")
+            if origin and dest:
+                url = google_flights_url(origin, dest, deal.get("depart_date"), deal.get("return_date"))
+                text += f" · [Vérifier]({url})"
+            lines.append(f"{i}. {text}")
         lines.append("")
 
     lines.append("## Routes (cheapest current offer, 7-day trend)")
     lines.append("")
     trends = route_trends(conn)
     if trends:
-        lines.append("| Route | Cheapest | 7d trend |")
-        lines.append("|-------|---------:|----------|")
+        lines.append("| Route | Cheapest | 7d trend | Google Flights |")
+        lines.append("|-------|---------:|----------|----------------|")
         for t in trends:
-            lines.append(f"| {t['origin']}→{t['dest']} | ${t['price']:.0f} | {t['trend']} |")
+            url = google_flights_url(t["origin"], t["dest"], t["depart"], t["back"])
+            lines.append(
+                f"| {t['origin']}→{t['dest']} | {t['price']:.0f} € | {t['trend']} | [Vérifier]({url}) |"
+            )
     else:
         lines.append("_No offers recorded in the last 24 hours._")
     lines.append("")
