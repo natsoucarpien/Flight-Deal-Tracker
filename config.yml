@@ -1,179 +1,82 @@
-# Flight deal tracker configuration.
-#
-# Credentials come from env vars: AMADEUS_CLIENT_ID / AMADEUS_CLIENT_SECRET.
-# AMADEUS_ENV switches between "test" and "production" (default: test).
+# Dénicheur de vols pas chers - départs Montpellier (priorité), Toulouse, Marseille, Barcelone, Paris.
+# Source de prix : Travelpayouts (Aviasales), prix en cache. Token via la variable TRAVELPAYOUTS_TOKEN.
 
 origins:
-  - code: GSO
-    earliest_departure: "08:00"
-  - code: CLT
-    earliest_departure: "09:00"
-  - code: RDU
-    earliest_departure: "10:00"
+  - code: MPL
+    earliest_departure: "00:00"   # 00:00 = pas de contrainte d'horaire
+  - code: TLS
+    earliest_departure: "00:00"
+  - code: MRS
+    earliest_departure: "00:00"
+  - code: BCN
+    earliest_departure: "00:00"
+  - code: PAR                     # code "ville" Paris (CDG + Orly). Si erreur, remplacer par CDG
+    earliest_departure: "00:00"
 
 destinations:
+  # "domestic" = destinations en France
   domestic:
-    - code: DEN
-      name: Denver
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-10-31", trip_length_days: 5}
-    - code: LAS
-      name: Las Vegas
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 4}
-    - code: MCO
-      name: Orlando
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-12-10", trip_length_days: 5}
-    - code: MIA
-      name: Miami
-      date_windows:
-        - {depart_start: "2026-10-01", depart_end: "2026-12-10", trip_length_days: 4}
-    - code: TPA
-      name: Tampa
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-12-10", trip_length_days: 4}
-    - code: AUS
-      name: Austin
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-20", trip_length_days: 4}
-    - code: SAN
-      name: San Diego
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 5}
-    - code: SEA
-      name: Seattle
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-10-31", trip_length_days: 5}
-    - code: BOS
-      name: Boston
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 4}
-    - code: MSY
-      name: New Orleans
-      date_windows:
-        - {depart_start: "2026-10-01", depart_end: "2026-12-10", trip_length_days: 4}
-    - code: SLC
-      name: Salt Lake City
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-10-31", trip_length_days: 5}
-    - code: PHX
-      name: Phoenix
-      date_windows:
-        - {depart_start: "2026-10-01", depart_end: "2026-12-10", trip_length_days: 4}
-    - code: JAX
-      name: Jacksonville
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-12-10", trip_length_days: 4}
-    - code: SAV
-      name: Savannah
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-20", trip_length_days: 4}
-    - code: CHS
-      name: Charleston
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-20", trip_length_days: 4}
+    - code: NCE
+      name: Nice
+      date_windows: &w4           # séjours de 4 jours (city-trips, week-ends)
+        - {depart_start: "2026-11-01", depart_end: "2026-12-31", trip_length_days: 4}
+        - {depart_start: "2027-01-01", depart_end: "2027-02-28", trip_length_days: 4}
+        - {depart_start: "2027-03-01", depart_end: "2027-04-30", trip_length_days: 4}
+        - {depart_start: "2027-05-01", depart_end: "2027-06-30", trip_length_days: 4}
+    - {code: AJA, name: Ajaccio, date_windows: *w4}
+    - {code: BIA, name: Bastia, date_windows: *w4}
+    - {code: BOD, name: Bordeaux, date_windows: *w4}
+    - {code: NTE, name: Nantes, date_windows: *w4}
+    - {code: LYS, name: Lyon, date_windows: *w4}
+
+  # "international" = tout le reste
   international:
-    - code: SCL
-      name: Santiago
-      date_windows:
-        - {depart_start: "2026-10-15", depart_end: "2026-12-10", trip_length_days: 8}
-    - code: MEX
-      name: Mexico City
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-20", trip_length_days: 7}
-    - code: CUN
-      name: Cancun
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-12-10", trip_length_days: 7}
-    - code: SJO
-      name: San Jose (Costa Rica)
-      date_windows:
-        - {depart_start: "2026-10-01", depart_end: "2026-12-10", trip_length_days: 7}
-    - code: PTY
-      name: Panama City
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-20", trip_length_days: 7}
-    - code: NAS
-      name: Nassau
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-20", trip_length_days: 5}
-    - code: PUJ
-      name: Punta Cana
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-12-10", trip_length_days: 7}
-    - code: YQB
-      name: Quebec City
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-10-31", trip_length_days: 5}
-    - code: YYZ
-      name: Toronto
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 5}
     - code: LIS
-      name: Lisbon
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 8}
-    - code: DUB
-      name: Dublin
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 7}
-    - code: FCO
-      name: Rome
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 8}
-    - code: CDG
-      name: Paris
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 8}
-    - code: LHR
-      name: London
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 7}
-    - code: AMS
-      name: Amsterdam
-      date_windows:
-        - {depart_start: "2026-09-15", depart_end: "2026-11-15", trip_length_days: 7}
-
-# Data source: Travelpayouts (Aviasales) cached flight-prices calendar API.
-# The cached data has no branded fares or per-segment routing, so the
-# main-cabin, connection-minimum, and per-direction duration filters that the
-# old Amadeus version supported are not available here.
-filters:
-  max_price_usd: 1000
-  max_stops: 1
-  # Rejected if the (marketing/validating) airline is one of: Spirit, Frontier,
-  # Allegiant, Avelo, Sun Country, Play, Norse, Breeze, Volaris, VivaAerobus.
-  # Cached data exposes only the validating airline, so a blocked *operating*
-  # carrier on a codeshare cannot be detected.
-  blocked_carriers: [NK, F9, G4, XP, SY, OG, N0, MX, Y4, VB]
-
-api_budget:
-  # Skip the run (with a logged warning) if this month's recorded call count
-  # plus the planned calls for the run would exceed this. One call fetches a
-  # whole month of departure dates for a route, so budgets go far.
-  monthly_max_calls: 10000
-
-# Call-budget strategy. Per run:
-#   3 origins x (domestic_per_run + international_per_run) destinations
-#     x windows_per_run windows x (calendar months spanning each window).
-# Destinations rotate deterministically (run counter stored in prices.db),
-# so every destination is revisited every ~2.5 days.
-rotation:
-  domestic_per_run: 2
-  international_per_run: 2
-  windows_per_run: 1
-
-search:
-  currency: usd
-
-ranking:
-  history_days: 30
-  # Minimum historical offers on a route before the trailing-median value
-  # score is used; below this, rank by absolute price (normalized against
-  # max_price_usd so the two scales are comparable).
-  min_history_offers: 8
-
-alerts:
-  threshold_dedupe_hours: 24
-  max_threshold_alerts_per_run: 5
+      name: Lisbonne
+      date_windows: &w5           # séjours de 5 jours
+        - {depart_start: "2026-11-01", depart_end: "2026-12-31", trip_length_days: 5}
+        - {depart_start: "2027-01-01", depart_end: "2027-02-28", trip_length_days: 5}
+        - {depart_start: "2027-03-01", depart_end: "2027-04-30", trip_length_days: 5}
+        - {depart_start: "2027-05-01", depart_end: "2027-06-30", trip_length_days: 5}
+    - {code: OPO, name: Porto, date_windows: *w5}
+    - {code: MAD, name: Madrid, date_windows: *w5}
+    - {code: SVQ, name: Seville, date_windows: *w5}
+    - {code: AGP, name: Malaga, date_windows: *w5}
+    - {code: PMI, name: Palma de Majorque, date_windows: *w5}
+    - {code: IBZ, name: Ibiza, date_windows: *w5}
+    - {code: FCO, name: Rome, date_windows: *w5}
+    - {code: NAP, name: Naples, date_windows: *w5}
+    - {code: VCE, name: Venise, date_windows: *w5}
+    - {code: MXP, name: Milan, date_windows: *w5}
+    - {code: CTA, name: Catane, date_windows: *w5}
+    - {code: PMO, name: Palerme, date_windows: *w5}
+    - {code: MLA, name: Malte, date_windows: *w5}
+    - {code: ATH, name: Athenes, date_windows: *w5}
+    - {code: SPU, name: Split, date_windows: *w5}
+    - {code: DBV, name: Dubrovnik, date_windows: *w5}
+    - {code: BER, name: Berlin, date_windows: *w5}
+    - {code: MUC, name: Munich, date_windows: *w5}
+    - {code: PRG, name: Prague, date_windows: *w5}
+    - {code: BUD, name: Budapest, date_windows: *w5}
+    - {code: VIE, name: Vienne, date_windows: *w5}
+    - {code: KRK, name: Cracovie, date_windows: *w5}
+    - {code: DUB, name: Dublin, date_windows: *w5}
+    - {code: EDI, name: Edimbourg, date_windows: *w5}
+    - {code: LON, name: Londres, date_windows: *w5}
+    - {code: AMS, name: Amsterdam, date_windows: *w5}
+    - {code: BRU, name: Bruxelles, date_windows: *w5}
+    - {code: CPH, name: Copenhague, date_windows: *w5}
+    - {code: ARN, name: Stockholm, date_windows: *w5}
+    - {code: KEF, name: Reykjavik, date_windows: *w5}
+    - code: RAK
+      name: Marrakech
+      date_windows: &w7           # séjours de 7 jours (plus loin / soleil)
+        - {depart_start: "2026-11-01", depart_end: "2026-12-31", trip_length_days: 7}
+        - {depart_start: "2027-01-01", depart_end: "2027-02-28", trip_length_days: 7}
+        - {depart_start: "2027-03-01", depart_end: "2027-04-30", trip_length_days: 7}
+        - {depart_start: "2027-05-01", depart_end: "2027-06-30", trip_length_days: 7}
+    - {code: AGA, name: Agadir, date_windows: *w7}
+    - {code: CMN, name: Casablanca, date_windows: *w7}
+    - {code: TUN, name: Tunis, date_windows: *w7}
+    - {code: IST, name: Istanbul, date_windows: *w7}
+    - {code: TFS, name: Tenerife Sud, date_windows: *w7}
