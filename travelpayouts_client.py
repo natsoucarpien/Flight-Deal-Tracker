@@ -32,6 +32,10 @@ MAX_RETRIES = 4
 BACKOFF_BASE_SECONDS = 1.5
 REQUEST_TIMEOUT_SECONDS = 30
 
+# False = ne pas filtrer sur la duree du sejour (voir prices_calendar).
+# Mettre True pour revenir au comportement d'origine (duree exacte).
+SEND_STAY_LENGTH = False
+
 
 class TravelpayoutsError(RuntimeError):
     """Raised when the Travelpayouts API returns an unrecoverable error."""
@@ -132,15 +136,18 @@ class TravelpayoutsClient:
         Each ticket has: origin, destination, price, transfers, airline,
         flight_number, departure_at, return_at, expires_at.
         """
-        payload = self._request(
-            CALENDAR_PATH,
-            {
-                "origin": origin,
-                "destination": destination,
-                "depart_date": depart_month,
-                "calendar_type": "departure_date",
-                "length": length,
-                "currency": currency or self.currency,
-            },
-        )
+        params: dict[str, Any] = {
+            "origin": origin,
+            "destination": destination,
+            "depart_date": depart_month,
+            "calendar_type": "departure_date",
+            "currency": currency or self.currency,
+        }
+        # Sans "length", l'API renvoie le billet le moins cher de chaque jour de
+        # depart, quelle que soit la duree du sejour. Avec "length", le cache
+        # ne renvoie que les sejours de cette duree exacte : tres peu de
+        # resultats pour les aeroports peu couverts (ex. Montpellier).
+        if SEND_STAY_LENGTH:
+            params["length"] = length
+        payload = self._request(CALENDAR_PATH, params)
         return payload.get("data", {}) or {}

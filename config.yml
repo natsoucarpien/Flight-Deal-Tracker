@@ -106,14 +106,15 @@ filters:
   blocked_carriers: []            # aucune : les low-cost (Ryanair, Vueling, easyJet...) sont voulues
 
 api_budget:
-  monthly_max_calls: 8000
+  monthly_max_calls: 25000
 
-# Par passage : 5 origines x (2 France + 5 international) x 1 fenetre x 2 mois = ~70 appels
-# 3 passages/jour = ~6300 appels/mois, sous le plafond ci-dessus.
+# Par passage : 5 origines x (2 France + 4 international) x 4 fenetres x 2 mois = ~240 appels
+# 3 passages/jour = ~21 600 appels/mois, sous le plafond ci-dessus.
+# Tour complet des 60 destinations : environ 10 passages (3 a 4 jours).
 rotation:
   domestic_per_run: 2
-  international_per_run: 5
-  windows_per_run: 1
+  international_per_run: 4
+  windows_per_run: 4   # le code prend les N premieres fenetres de chaque destination
 
 search:
   currency: eur
