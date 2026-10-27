@@ -1,19 +1,19 @@
 # Flight deal report
 
-_Updated 2026-10-27 13:43 UTC_
+_Updated 2026-10-27 19:45 UTC_
 
 _Prix en euros, issus d'un cache : à vérifier sur Google Flights ou chez la compagnie avant de réserver._
 
 ## Top 3 domestic
 
-1. BCN->LIL 130 € · V7 2167 · 1 stop · Jan 6-10 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20LIL%20on%202027-01-06%20through%202027-01-10&curr=EUR&hl=fr)
-2. TLS->LYS 148 € · U2 8478 · 1 stop · Nov 6-8 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20LYS%20on%202026-11-06%20through%202026-11-08&curr=EUR&hl=fr)
+1. PAR->BES 157 € · Air France (AF) 7524 · nonstop · Jan 12-15 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20BES%20on%202027-01-12%20through%202027-01-15&curr=EUR&hl=fr)
+2. PAR->RNS 199 € · A5 7530 · 1 stop · May 27-Jun 3 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20RNS%20on%202027-05-27%20through%202027-06-03&curr=EUR&hl=fr)
 
 ## Top 3 international
 
-1. BCN->MAD 38 € · Iberia (IB) 428 · nonstop · Dec 23-27 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20MAD%20on%202026-12-23%20through%202026-12-27&curr=EUR&hl=fr)
-2. TLS->SVQ 102 € · FR 1988 · 1 stop · Dec 5-7 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20SVQ%20on%202026-12-05%20through%202026-12-07&curr=EUR&hl=fr)
-3. PAR->PMI 72 € · VY 3965 · nonstop · Jan 10-12 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20PMI%20on%202027-01-10%20through%202027-01-12&curr=EUR&hl=fr)
+1. MRS->VCE 78 € · FR 2959 · nonstop · Nov 6-13 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20VCE%20on%202026-11-06%20through%202026-11-13&curr=EUR&hl=fr)
+2. BCN->NAP 33 € · VY 6122 · nonstop · Jan 5-14 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20NAP%20on%202027-01-05%20through%202027-01-14&curr=EUR&hl=fr)
+3. PAR->FCO 56 € · FR 166 · nonstop · Jan 6-10 · [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20FCO%20on%202027-01-06%20through%202027-01-10&curr=EUR&hl=fr)
 
 ## Routes (cheapest current offer, 7-day trend)
 
@@ -22,63 +22,63 @@ _Prix en euros, issus d'un cache : à vérifier sur Google Flights ou chez la co
 | BCN→ACE | 65 € | ↑ 4 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20ACE%20on%202027-01-04%20through%202027-01-14&curr=EUR&hl=fr) |
 | BCN→AGP | 59 € | ↑ 6 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20AGP%20on%202026-12-16%20through%202026-12-25&curr=EUR&hl=fr) |
 | BCN→BOD | 42 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20BOD%20on%202026-12-18%20through%202027-01-02&curr=EUR&hl=fr) |
-| BCN→CAI | 193 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20CAI%20on%202026-12-08%20through%202026-12-11&curr=EUR&hl=fr) |
-| BCN→FAO | 109 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20FAO%20on%202026-11-07%20through%202026-11-10&curr=EUR&hl=fr) |
+| BCN→FCO | 35 € | ↓ 1 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20FCO%20on%202026-12-15%20through%202026-12-19&curr=EUR&hl=fr) |
 | BCN→FEZ | 65 € | ↑ 33 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20FEZ%20on%202026-11-09%20through%202026-11-13&curr=EUR&hl=fr) |
+| BCN→IBZ | 32 € | ↑ 6 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20IBZ%20on%202026-11-07%20through%202026-11-09&curr=EUR&hl=fr) |
 | BCN→LIL | 130 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20LIL%20on%202027-01-06%20through%202027-01-10&curr=EUR&hl=fr) |
 | BCN→LIS | 42 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20LIS%20on%202026-11-24%20through%202026-11-30&curr=EUR&hl=fr) |
-| BCN→LPA | 62 € | ↓ 1 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20LPA%20on%202026-11-16%20through%202026-11-26&curr=EUR&hl=fr) |
 | BCN→LYS | 69 € | ↑ 12 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20LYS%20on%202026-11-26%20through%202026-11-29&curr=EUR&hl=fr) |
 | BCN→MAD | 38 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20MAD%20on%202026-12-23%20through%202026-12-27&curr=EUR&hl=fr) |
-| BCN→NCE | 59 € | ↓ 1 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20NCE%20on%202026-11-25%20through%202026-12-02&curr=EUR&hl=fr) |
+| BCN→NAP | 33 € | ↓ 5 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20NAP%20on%202027-01-05%20through%202027-01-14&curr=EUR&hl=fr) |
 | BCN→NTE | 50 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20NTE%20on%202027-01-15%20through%202027-01-17&curr=EUR&hl=fr) |
 | BCN→OPO | 42 € | ↓ 6 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20OPO%20on%202026-11-02%20through%202026-11-07&curr=EUR&hl=fr) |
 | BCN→PMI | 30 € | ↑ 5 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20PMI%20on%202027-01-04%20through%202027-01-08&curr=EUR&hl=fr) |
 | BCN→RBA | 143 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20RBA%20on%202026-11-20%20through%202026-11-22&curr=EUR&hl=fr) |
 | BCN→SVQ | 49 € | ↑ 2 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20SVQ%20on%202026-11-30%20through%202026-12-02&curr=EUR&hl=fr) |
-| BCN→SXB | 46 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20SXB%20on%202026-11-19%20through%202026-11-23&curr=EUR&hl=fr) |
-| BCN→TFS | 113 € | ↑ 24 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20TFS%20on%202026-11-07%20through%202026-11-21&curr=EUR&hl=fr) |
 | BCN→TNG | 51 € | ↑ 5 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20TNG%20on%202027-03-14%20through%202027-03-21&curr=EUR&hl=fr) |
+| BCN→VCE | 32 € | ↑ 6 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20BCN%20to%20VCE%20on%202026-11-20%20through%202026-11-24&curr=EUR&hl=fr) |
+| MPL→FCO | 135 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MPL%20to%20FCO%20on%202026-12-17%20through%202026-12-20&curr=EUR&hl=fr) |
 | MPL→MAD | 163 € | ↑ 1 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MPL%20to%20MAD%20on%202026-11-20%20through%202026-11-23&curr=EUR&hl=fr) |
 | MPL→NTE | 68 € | ↓ 9 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MPL%20to%20NTE%20on%202026-11-13%20through%202026-11-16&curr=EUR&hl=fr) |
 | MPL→ORN | 119 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MPL%20to%20ORN%20on%202026-11-22%20through%202026-12-01&curr=EUR&hl=fr) |
 | MPL→SVQ | 137 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MPL%20to%20SVQ%20on%202027-06-07%20through%202027-06-09&curr=EUR&hl=fr) |
 | MRS→AJA | 159 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20AJA%20on%202026-11-10%20through%202026-11-16&curr=EUR&hl=fr) |
 | MRS→BOD | 115 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20BOD%20on%202026-11-02%20through%202026-11-11&curr=EUR&hl=fr) |
-| MRS→FAO | 150 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20FAO%20on%202026-12-31%20through%202027-01-07&curr=EUR&hl=fr) |
+| MRS→FCO | 99 € | ↓ 23 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20FCO%20on%202026-11-23%20through%202026-11-27&curr=EUR&hl=fr) |
 | MRS→FEZ | 101 € | ↑ 30 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20FEZ%20on%202026-11-08%20through%202026-11-14&curr=EUR&hl=fr) |
 | MRS→LIS | 64 € | ↓ 20 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20LIS%20on%202027-01-15%20through%202027-01-17&curr=EUR&hl=fr) |
 | MRS→MAD | 95 € | ↑ 1 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20MAD%20on%202026-11-20%20through%202026-11-23&curr=EUR&hl=fr) |
+| MRS→NAP | 116 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20NAP%20on%202026-12-10%20through%202026-12-13&curr=EUR&hl=fr) |
 | MRS→NTE | 65 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20NTE%20on%202027-01-11%20through%202027-01-14&curr=EUR&hl=fr) |
 | MRS→OPO | 33 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20OPO%20on%202026-11-24%20through%202026-11-26&curr=EUR&hl=fr) |
 | MRS→ORN | 77 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20ORN%20on%202026-11-20%20through%202026-11-25&curr=EUR&hl=fr) |
 | MRS→PMI | 132 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20PMI%20on%202027-01-10%20through%202027-01-25&curr=EUR&hl=fr) |
-| MRS→SXB | 186 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20SXB%20on%202026-12-21%20through%202026-12-26&curr=EUR&hl=fr) |
-| MRS→TFS | 87 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20TFS%20on%202026-12-07%20through%202026-12-14&curr=EUR&hl=fr) |
 | MRS→TNG | 59 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20TNG%20on%202026-12-14%20through%202026-12-22&curr=EUR&hl=fr) |
+| MRS→VCE | 78 € | ↓ 34 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20MRS%20to%20VCE%20on%202026-11-06%20through%202026-11-13&curr=EUR&hl=fr) |
 | PAR→ACE | 75 € | ↓ 37 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20ACE%20on%202026-12-15%20through%202026-12-18&curr=EUR&hl=fr) |
 | PAR→AGP | 91 € | ↑ 22 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20AGP%20on%202026-11-28%20through%202026-11-30&curr=EUR&hl=fr) |
 | PAR→AJA | 160 € | ↑ 9 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20AJA%20on%202027-05-22%20through%202027-05-29&curr=EUR&hl=fr) |
+| PAR→BES | 157 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20BES%20on%202027-01-12%20through%202027-01-15&curr=EUR&hl=fr) |
 | PAR→BIA | 172 € | ↑ 6 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20BIA%20on%202026-11-27%20through%202026-11-29&curr=EUR&hl=fr) |
 | PAR→BOD | 123 € | ↑ 2 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20BOD%20on%202027-01-25%20through%202027-02-01&curr=EUR&hl=fr) |
-| PAR→CAI | 131 € | ↓ 3 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20CAI%20on%202027-01-13%20through%202027-01-17&curr=EUR&hl=fr) |
 | PAR→DJE | 124 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20DJE%20on%202026-11-13%20through%202026-11-20&curr=EUR&hl=fr) |
-| PAR→FAO | 69 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20FAO%20on%202026-12-15%20through%202026-12-24&curr=EUR&hl=fr) |
+| PAR→FCO | 56 € | ↓ 3 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20FCO%20on%202027-01-06%20through%202027-01-10&curr=EUR&hl=fr) |
 | PAR→FEZ | 48 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20FEZ%20on%202026-11-16%20through%202026-11-24&curr=EUR&hl=fr) |
+| PAR→IBZ | 69 € | ↓ 91 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20IBZ%20on%202027-05-09%20through%202027-05-15&curr=EUR&hl=fr) |
 | PAR→LIS | 71 € | ↑ 4 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20LIS%20on%202026-11-17%20through%202026-11-26&curr=EUR&hl=fr) |
-| PAR→LPA | 84 € | ↑ 2 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20LPA%20on%202026-12-15%20through%202026-12-22&curr=EUR&hl=fr) |
 | PAR→LYS | 153 € | ↓ 38 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20LYS%20on%202027-02-11%20through%202027-02-16&curr=EUR&hl=fr) |
 | PAR→MAD | 58 € | ↓ 6 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20MAD%20on%202026-12-04%20through%202026-12-06&curr=EUR&hl=fr) |
-| PAR→NCE | 71 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20NCE%20on%202027-01-05%20through%202027-01-08&curr=EUR&hl=fr) |
+| PAR→NAP | 81 € | ↑ 16 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20NAP%20on%202027-02-08%20through%202027-02-14&curr=EUR&hl=fr) |
 | PAR→NTE | 140 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20NTE%20on%202026-12-01%20through%202026-12-04&curr=EUR&hl=fr) |
 | PAR→OPO | 56 € | ↓ 9 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20OPO%20on%202026-11-17%20through%202026-11-24&curr=EUR&hl=fr) |
 | PAR→ORN | 121 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20ORN%20on%202026-11-21%20through%202026-11-24&curr=EUR&hl=fr) |
 | PAR→PMI | 72 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20PMI%20on%202027-01-10%20through%202027-01-12&curr=EUR&hl=fr) |
 | PAR→RBA | 78 € | ↓ 19 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20RBA%20on%202026-12-05%20through%202026-12-13&curr=EUR&hl=fr) |
+| PAR→RNS | 199 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20RNS%20on%202027-05-27%20through%202027-06-03&curr=EUR&hl=fr) |
 | PAR→SVQ | 87 € | ↓ 24 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20SVQ%20on%202026-11-01%20through%202026-11-10&curr=EUR&hl=fr) |
-| PAR→SXB | 179 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20SXB%20on%202026-12-11%20through%202026-12-13&curr=EUR&hl=fr) |
-| PAR→TFS | 89 € | ↑ 10 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20TFS%20on%202026-12-10%20through%202026-12-16&curr=EUR&hl=fr) |
 | PAR→TNG | 67 € | ↑ 6 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20TNG%20on%202026-11-13%20through%202026-11-17&curr=EUR&hl=fr) |
+| PAR→VCE | 30 € | ↓ 8 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20PAR%20to%20VCE%20on%202026-11-01%20through%202026-11-08&curr=EUR&hl=fr) |
+| TLS→FCO | 91 € | ↓ 4 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20FCO%20on%202026-11-01%20through%202026-11-04&curr=EUR&hl=fr) |
 | TLS→FEZ | 51 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20FEZ%20on%202026-11-30%20through%202026-12-05&curr=EUR&hl=fr) |
 | TLS→LIL | 172 € | ↑ 76 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20LIL%20on%202026-12-23%20through%202026-12-29&curr=EUR&hl=fr) |
 | TLS→LIS | 122 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20LIS%20on%202026-12-22%20through%202027-01-04&curr=EUR&hl=fr) |
@@ -87,6 +87,5 @@ _Prix en euros, issus d'un cache : à vérifier sur Google Flights ou chez la co
 | TLS→ORN | 128 € | ↓ 3 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20ORN%20on%202026-11-05%20through%202026-11-12&curr=EUR&hl=fr) |
 | TLS→RBA | 95 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20RBA%20on%202026-11-13%20through%202026-11-15&curr=EUR&hl=fr) |
 | TLS→SVQ | 102 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20SVQ%20on%202026-12-05%20through%202026-12-07&curr=EUR&hl=fr) |
-| TLS→SXB | 58 € | → flat | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20SXB%20on%202026-12-15%20through%202026-12-17&curr=EUR&hl=fr) |
-| TLS→TFS | 166 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20TFS%20on%202027-01-04%20through%202027-01-10&curr=EUR&hl=fr) |
 | TLS→TNG | 95 € | ↑ 29 € | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20TNG%20on%202026-11-13%20through%202026-11-15&curr=EUR&hl=fr) |
+| TLS→VCE | 89 € | – | [Vérifier](https://www.google.com/travel/flights?q=Flights%20from%20TLS%20to%20VCE%20on%202026-11-15%20through%202026-11-19&curr=EUR&hl=fr) |
